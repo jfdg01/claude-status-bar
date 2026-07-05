@@ -6,7 +6,7 @@ cwd=$(echo "$input" | jq -r '.workspace.current_dir // .cwd // "?"')
 effort=$(echo "$input" | jq -r '.effort.level // empty')
 
 tokens=$(echo "$input" | jq -r '.context_window.total_input_tokens // 0')
-compact_threshold=125000
+compact_threshold=140000
 compact_pct=$(echo "$tokens $compact_threshold" | awk '{printf "%.0f", $1/$2*100}')
 
 branch=$(GIT_OPTIONAL_LOCKS=0 git -C "$cwd" symbolic-ref --short HEAD 2>/dev/null)

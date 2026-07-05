@@ -17,7 +17,7 @@ Then add to `~/.claude/settings.json`:
 }
 ```
 
-Requires `jq`, `awk`, `git`. Adjust `compact_threshold` (default 125000) in the script if your context window differs.
+Requires `jq`, `awk`, `git`. Adjust `compact_threshold` (default 140000) in the script if your context window differs.
 
 ## Update
 
